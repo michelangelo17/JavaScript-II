@@ -83,11 +83,16 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-// Create a new array where the runners are ordered by largest donation to smallest donation to give the poeple who donated more better visability.
-
+// Find the average donation.
+let averageDonation = runners.reduce((sum, runner) => Math.round(sum + (runner.donation) / runners.length), 0);
+console.log(averageDonation);
 
 // Problem 2
-// Find all the people who needed large shirts and donated more than 100 dollars so they can get replacement shirts for free.
+// Find all the people who needed large shirts and donated 100 dollars or more so they can get replacement shirts for free.
+let freeShirtReplacements = runners.filter(runner => { if (runner.shirt_size === "L" && runner.donation >= 100) return runner});
+console.log(freeShirtReplacements);
 
 // Problem 3
-// Alphabetise the list by company name to make mailers to encourage more employees at each company to particpate next year.
+// Create an alphabetised list of company names to make mailers to encourage more employees at each company to particpate next year.
+let spamTheseCompanies = runners.map(runner => runner.company_name).sort();
+console.log(spamTheseCompanies);
