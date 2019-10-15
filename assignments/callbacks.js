@@ -38,11 +38,11 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   console.log(test2); // "this Pencil is worth a million dollars!"
 */
 
-const testArr = [1, 2, "apples", 3, 4, 5, "pear", 6, 7, 8, 8, "apples"]
-const newVar = []
-function testcb(v) {
-  newVar.push(v);
-}
+// const testArr = [1, 2, "apples", 3, 4, 5, "pear", 6, 7, 8, 8, "apples"]
+// const newVar = []
+// function testcb(v) {
+//   newVar.push(v);
+// }
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
@@ -54,14 +54,11 @@ function last(arr, cb) {
   return cb(arr[arr.length - 1]);
 }
 
-
-
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   let sum = x + y;
   return cb(sum);
 }
-
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
