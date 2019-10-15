@@ -78,8 +78,6 @@ function contains(item, list, cb) {
   }
 }
 
-
-
 contains(1, testArr, testcb);
 console.log(newVar);
 /* STRETCH PROBLEM */
